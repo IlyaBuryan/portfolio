@@ -23,7 +23,7 @@
     {% if i.Completed == True %}
     <div class="main_news_article">
         <div class="main_news_article_pic">
-            <img class="main_news_article_img" src="www/media/{{ i.picture.url }}" alt="news">
+            <img class="main_news_article_img" src="{{ i.picture.url }}" alt="news">
         </div>
         <div class="main_news_article_text">
             <p class="article_title">{{ i.title }}</p>
