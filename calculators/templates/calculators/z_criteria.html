@@ -1,0 +1,71 @@
+{% extends 'extensions/layout.html' %}
+{% load static %}
+
+{% block title %}
+{{ title|capfirst }}
+{% endblock %}
+
+{% block header %}
+<div class="header header_allpages">
+    <div class="header_content container_width">
+        {% include 'extensions/header_menu.html' %}
+        <p class="headliner_allpages">
+            <nobr>Z-criteria</nobr>
+        </p>
+        <p class="text_allpages">Calculate the statistical difference between shares
+            <nobr>Z-criteria</nobr>
+        </p>
+    </div>
+</div>
+{% endblock %}
+
+{% block maincontent %}
+
+<div class="main_zcriteria container_width">
+
+    <form class="main_zcriteria_form" method="post">
+        {% csrf_token %}
+
+        {% if form %}
+
+        {{ form.as_p }}
+
+        {% endif %}
+
+        <div class="buttons">
+            <input type="submit" value="Calculate" class="btn btn-primary">
+            <a class="btn btn-warning" href="{% url 'calculators:z_criteria' %}">Reset page</a>
+        </div>
+    </form>
+
+    <div class="main_zcriteria_answer">
+        {% if answer %}
+
+        {% for k, v in answer.items %}
+
+        {% if v == 'Sig. diff' %}
+        <div class="test_yes">
+            {{ k }}
+            {{ v }}
+            <span>
+                ({{ form.cleaned_data.perc_1 }}% vs. {{ form.cleaned_data.perc_2 }}%)
+            </span>
+        </div>
+        {% else %}
+        <div class="test_no">
+            {{ k }}
+            {{ v }}
+            <span>
+                ({{ form.cleaned_data.perc_1 }}% vs. {{ form.cleaned_data.perc_2 }}%)
+            </span>
+        </div>
+        {% endif %}
+
+        {% endfor %}
+
+        {% endif %}
+    </div>
+
+</div>
+
+{% endblock %}

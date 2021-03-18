@@ -1,0 +1,311 @@
+{% extends 'extensions/layout.html' %}
+{% load static %}
+
+{% block title %}
+{{ title|capfirst }}
+{% endblock %}
+
+
+{% block header %}
+<div class="header">
+    <div class="header_content container_width">
+        {% include 'extensions/header_menu.html' %}
+        <div class="header_info">
+            <div class="header_info_text">
+                <div class="header_info_text_headline">
+                    <p class="headliner">Burian Ilya</p>
+                    <p class="headliner_bot">a Python web developer</p>
+                </div>
+                <div class="header_info_text_container">
+                    <p class="header_info_text_container_p">
+                        Hello! I&rsquo;m a begining developer and i&rsquo;m eager to&nbsp;become
+                        a&nbsp;professional of&nbsp;a&nbsp;high level.
+                    </p>
+                    <p class="header_info_text_container_p hidden">
+                        As&nbsp;soon as&nbsp;i&nbsp;became passionate about development i&nbsp;turned
+                        to&nbsp;the Python and really liked&nbsp;it.
+                    </p>
+                </div>
+            </div>
+            <div class="header_info_photocontainer"></div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block maincontent %}
+
+<div class="main_section container_width">
+    <span class="main_section_headline">General information</span>
+    <hr class="main_section_hr">
+    <div class="main_section_text">
+        <ul class="main_section_text_list">
+            <li class="main_section_text_list_item">Male, 30 years,
+                married
+            </li>
+            <li class="main_section_text_list_item">Russia, Moscow</li>
+            <li class="main_section_text_list_item">Languages: Russian&nbsp;—&nbsp;Native
+                &nbsp;// English&nbsp;—&nbsp;6.0&nbsp;<strong>IELTS</strong>&nbsp;GM
+            </li>
+            <li class="main_section_text_list_item">Desired position: Junior Python web developer</li>
+        </ul>
+    </div>
+</div>
+
+<div class="main_section container_width">
+    <span class="main_section_headline">IT skills</span>
+    <hr class="main_section_hr">
+    <div class="main_section_text">
+        <ul class="main_section_text_list">
+            <li class="main_section_text_list_item">Programm on the <strong>Python</strong> (like OOP)
+            </li>
+            <li class="main_section_text_list_item">
+                Create websites via <strong>Django Framework</strong> v3.1.6
+            </li>
+            <li class="main_section_text_list_item">Understand Python algorithms and
+                structures<br>Big &laquo;O&raquo;, execution optimization etc.
+            </li>
+            <li class="main_section_text_list_item"><strong>HTML5, CSS3</strong> (SCSS, Bootstrap)
+            </li>
+            <li class="main_section_text_list_item">Use
+                <strong>JavaScript</strong> to interact with DOM (familiar
+                with JQuery, Ajax)
+            </li>
+            <li class="main_section_text_list_item"><strong>Linux</strong> Ubuntu console (familiar with Docker,
+                Docker Compose)
+            </li>
+            <li class="main_section_text_list_item">Work in <strong>MySQL</strong>
+                (familiar with NoSQL dbs)
+            </li>
+            <li class="main_section_text_list_item">Use
+                <strong>Git</strong> (pull, push, commit etc.)
+            </li>
+            <li class="main_section_text_list_item">Graphic editors: <strong>Photoshop, Gimp,
+                    Figma</strong>
+            </li>
+        </ul>
+        <a class="main_section_text_link" href="{% url 'projects' %}">...to the projects links and github &raquo;&raquo;</a>
+    </div>
+</div>
+
+<div class="main_section container_width">
+    <span class="main_section_headline">General skills</span>
+    <hr class="main_section_hr">
+    <div class="main_section_text">
+        <ul class="main_section_text_list">
+            <li class="main_section_text_list_item">Vast experience in&nbsp;dealing with databases and
+                analysis
+            </li>
+            <li class="main_section_text_list_item">
+                More than 8 years experience of the Team project work in research
+            </li>
+            <li class="main_section_text_list_item">
+                English language skill to maintain the collaboration, to read the
+                documentation&nbsp;etc.
+            </li>
+            <li class="main_section_text_list_item">
+                Сontinuous development and learning, quick adaptation
+            </li>
+            <li class="main_section_text_list_item">
+                Good time-management and feeling of responsibility
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="main_section container_width">
+    <span class="main_section_headline">Education</span>
+    <hr class="main_section_hr">
+    <div class="main_section_text">
+        <div class="main_section_text_university">
+            <img class="main_section_text_img" src="{% static 'img/geekbrains.png' %}" alt="University">
+            <p class="main_section_text_name">Geek Brains University</p>
+            <a class="main_section_text_link" href="https://geekbrains.ru/" target="_blank">...visit
+                site</a>
+        </div>
+        <ul class="main_section_text_list">
+            <li class="main_section_text_list_item margined">
+                2020 Aug.- 2021 Oct. (16 months) <br>&mdash;&nbsp;Diploma: Python developer
+            </li>
+        </ul>
+
+        <div class="main_section_text_university">
+            <img class="main_section_text_img" src="{% static 'img/coursera.png' %}" alt="University">
+            <p class="main_section_text_name">Coursera Course Certificates</p>
+            <a class="main_section_text_link" href="https://www.coursera.org/" target="_blank">...visit
+                site</a>
+        </div>
+        <ul class="main_section_text_list">
+            <li class="main_section_text_list_item margined">
+                2019 (9 weeks) <br>&mdash;&nbsp;Certificate: Python Basis
+            </li>
+        </ul>
+
+        <div class="main_section_text_university">
+            <img class="main_section_text_img" src="{% static 'img/university.png' %}" alt="University">
+            <p class="main_section_text_name">Voronezh State University</p>
+            <a class="main_section_text_link" href="http://www.vsu.ru/" target="_blank">...visit
+                site</a>
+        </div>
+        <ul class="main_section_text_list">
+            <li class="main_section_text_list_item margined">
+                2007&ndash;2012 <br>&mdash;&nbsp;Diploma: Sociologist (honors&nbsp;degree)
+            </li>
+            <li class="main_section_text_list_item margined">
+                2007&ndash;2012 <br>&mdash;&nbsp;Diploma: Interpreter in&nbsp;the sphere
+                of&nbsp;professional communications
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="main_section container_width">
+    <span class="main_section_headline">Work experience</span>
+    <hr class="main_section_hr">
+    <div class="main_section_text">
+        <div class="main_section_text_university">
+            <img class="main_section_text_img" src="{% static 'img/ipsos.png' %}" alt="work">
+            <p class="main_section_text_name">Ipsos</p>
+            <a class="main_section_text_link" href="https://www.ipsos.com/" target="_blank">...visit
+                site</a>
+        </div>
+        <ul class="main_section_text_list">
+            <li class="main_section_text_list_item margined">
+                November 2019&nbsp;&mdash; January 2021 <br>
+                <b>Senior Research Manager</b>
+            </li>
+            <li class="main_section_text_list_item margined">
+                <ul class="main_section_text_list">
+                    <li class="main_section_text_list_item">
+                        Conduct the quantitative researches (reports and
+                        presentations mainly in English)
+                    </li>
+                    <li class="main_section_text_list_item">
+                        Deal with databases, statistics and huge amount of&nbsp;analytical work
+                    </li>
+                    <li class="main_section_text_list_item">
+                        Work in&nbsp;a&nbsp;team and manage company's departments to&nbsp;reach
+                        a&nbsp;result
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="main_section_text_university">
+            <img class="main_section_text_img" src="{% static 'img/drofa.png' %}" alt="work">
+            <p class="main_section_text_name">Drofa</p>
+            <a class="main_section_text_link" href="https://rosuchebnik.ru/" target="_blank">...visit
+                site</a>
+        </div>
+        <ul class="main_section_text_list">
+            <li class="main_section_text_list_item margined">
+                August 2018&nbsp;&mdash; November 2019 <br>
+                <b>Leading marketing research manager</b>
+            </li>
+            <li class="main_section_text_list_item margined">
+                <ul class="main_section_text_list">
+                    <li class="main_section_text_list_item">
+                        Conduct the quantitative researches for product development
+                    </li>
+                    <li class="main_section_text_list_item">
+                        Analytical work in&nbsp;SPSS, &laquo;select&raquo; queries to&nbsp;the SQL base
+                    </li>
+                    <li class="main_section_text_list_item">
+                        Work in&nbsp;a&nbsp;team to&nbsp;formulate and statistically check the hypnosis
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="main_section_text_university">
+            <img class="main_section_text_img" src="{% static 'img/man.svg' %}" alt="work">
+            <p class="main_section_text_name">Self-employed</p>
+        </div>
+        <ul class="main_section_text_list">
+            <li class="main_section_text_list_item margined">
+                February 2019&nbsp;&mdash; November 2019 <br>
+            </li>
+            <li class="main_section_text_list_item margined">
+                <ul class="main_section_text_list">
+                    <li class="main_section_text_list_item">
+                        Preparation of proposals for researches
+                    </li>
+                    <li class="main_section_text_list_item">
+                        Analytical work (data processing in&nbsp;SPSS, reporting)
+                    </li>
+                    <li class="main_section_text_list_item">
+                        Supplying and conducting the research projects
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="main_section_text_university">
+            <img class="main_section_text_img" src="{% static 'img/ba.png' %}" alt="work">
+            <p class="main_section_text_name">Business Analytica</p>
+            <a class="main_section_text_link" href="https://www.businessanalytica.ru/" target="_blank">...visit
+                site</a>
+        </div>
+        <ul class="main_section_text_list">
+            <li class="main_section_text_list_item margined">
+                August 2012&nbsp;&mdash; August 2018 <br>
+                <b>From Assistant to a Senior quantitative research manager</b>
+            </li>
+            <li class="main_section_text_list_item margined">
+                <ul class="main_section_text_list">
+                    <li class="main_section_text_list_item">
+                        Management of&nbsp;research projects and building relations with clients
+                    </li>
+                    <li class="main_section_text_list_item">
+                        With support of&nbsp;IT&nbsp;department work on&nbsp;automation of the processes
+                    </li>
+                    <li class="main_section_text_list_item">
+                        Successfully saturated with knowledges to&nbsp;grow to&nbsp;a&nbsp;senior
+                        position
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="main_section container_width">
+    <span class="main_section_headline">More details</span>
+    <hr class="main_section_hr">
+    <div class="main_section_text_list_item">
+        <p class="main_moreabout_text">
+            More than 8 years I&nbsp;have been working as&nbsp;a&nbsp;research manager. This was
+            really useful and amazing time, when I&nbsp;grew up&nbsp;as&nbsp;a&nbsp;professional
+            of&nbsp;that field. But during the last couple of years I’d&nbsp;began to&nbsp;feel that
+            want
+            something different, something more. <br><br> At&nbsp;first I&nbsp;focused on&nbsp;attempts
+            to&nbsp;bring some automation to&nbsp;the&nbsp;current working process, but it&nbsp;was hard with
+            a&nbsp;lack
+            of&nbsp;knowledge. This was <strong>the first motive</strong> to&nbsp;turn to&nbsp;web
+            development. <br><br> Also many aspects of&nbsp;my&nbsp;work turned to&nbsp;routine
+            as&nbsp;I&nbsp;began feeling necessity of&nbsp;a&nbsp;new knowledge. This was <strong>the
+                second
+                motive</strong>. As&nbsp;the demand was formed i&nbsp;became really passionate about
+            being a&nbsp;web developer, beside it&nbsp;was my&nbsp;old, but not realized dream,
+            to&nbsp;be&nbsp;a&nbsp;creator (<strong>the third motive</strong>). <br><br> So&nbsp;the
+            decision to&nbsp;be&nbsp;a&nbsp;web developer is&nbsp;not accidental. And i&nbsp;eager
+            to&nbsp;become a&nbsp;high level professional as&nbsp;soon as&nbsp;possible. Hope
+            to&nbsp;pass a&nbsp;rapid growth,&nbsp;and for this sake ready
+            to&nbsp;do&nbsp;all my&nbsp;best.
+        </p>
+        <p class="main_moreabout_listheader">Personal qualities:</p>
+        <ul class="main_section_text_list about_margined">
+            <li class="main_section_text_list_item">Goal oriented</li>
+            <li class="main_section_text_list_item">Very fast learner</li>
+            <li class="main_section_text_list_item">Analytical thinker</li>
+            <li class="main_section_text_list_item">Disciplined and responsible</li>
+            <li class="main_section_text_list_item">Emotionally
+                stable
+            </li>
+            <li class="main_section_text_list_item">Flexible</li>
+        </ul>
+    </div>
+</div>
+
+{% endblock %}

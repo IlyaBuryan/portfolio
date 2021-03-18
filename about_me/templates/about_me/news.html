@@ -1,0 +1,42 @@
+{% extends 'extensions/layout.html' %}
+
+{% block title %}
+{{ title|capfirst }}
+{% endblock %}
+
+{% block header %}
+<div class="header header_allpages">
+    <div class="header_content container_width">
+        {% include 'extensions/header_menu.html' %}
+        <p class="headliner_allpages">News</p>
+        <p class="text_allpages">The page describes news and updates of&nbsp;the projects and the site</p>
+    </div>
+</div>
+{% endblock %}
+
+{% block maincontent %}
+
+{% if object_list %}
+
+<div class="main_news container_width">
+    {% for i in object_list %}
+    {% if i.Completed == True %}
+    <div class="main_news_article">
+        <div class="main_news_article_pic">
+            <img class="main_news_article_img" src="{{ i.picture.url }}" alt="news">
+        </div>
+        <div class="main_news_article_text">
+            <p class="article_title">{{ i.title }}</p>
+            <p class="article_description">{{ i.description }}</p>
+            <p class="article_datetime">{{ i.datetime|date:"d-m-Y" }}</p>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+
+    {% else %}
+    <p>No news</p>
+    {% endif %}
+
+    {% endblock %}
+</div>

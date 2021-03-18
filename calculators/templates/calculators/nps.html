@@ -1,0 +1,84 @@
+{% extends 'extensions/layout.html' %}
+{% load static %}
+
+{% block title %}
+{{ title|upper }}
+{% endblock %}
+
+{% block header %}
+<div class="header header_allpages">
+    <div class="header_content container_width">
+        {% include 'extensions/header_menu.html' %}
+        <p class="headliner_allpages">NPS</p>
+        <p class="text_allpages">Calculate statistical difference between NPS</p>
+    </div>
+</div>
+{% endblock %}
+
+{% block maincontent %}
+
+<div class="main_nps container_width">
+    {% if form %}
+
+    <form method="post" class="main_nps_form">
+        {% csrf_token %}
+
+        <div class="samples">
+            <div class="first_sample">
+                <h3>Sample 1</h3>
+                <p>
+                    {% if nps1 %}
+                    {{ nps1 }}
+                    {% endif %}
+                </p>
+                {{ form.crit1 }}
+                {{ form.neut1 }}
+                {{ form.prom1 }}
+                {{ form.errors.crit1 }}
+            </div>
+
+            <div class="second_sample">
+                <h3>Sample 2</h3>
+                <p>
+                    {% if nps2 %}
+                    {{ nps2 }}
+                    {% endif %}
+                </p>
+                {{ form.crit2 }}
+                {{ form.neut2 }}
+                {{ form.prom2 }}
+                {{ form.errors.crit2 }}
+            </div>
+        </div>
+
+        <div class="buttons">
+            <input type="submit" value="Calculate" class="btn btn-primary">
+            <a class="btn btn-warning" href="{% url 'calculators:nps' %}">Reset page</a>
+        </div>
+
+    </form>
+
+    <div class="main_nps_answer">
+        {% if answer %}
+
+        {% for k, v in answer.items %}
+        {% if v == 'Sig. diff' %}
+        <div class="test_yes">
+            {{ k }}
+            {{ v }}
+        </div>
+        {% else %}
+        <div class="test_no">
+            {{ k }}
+            {{ v }}
+        </div>
+        {% endif %}
+        {% endfor %}
+
+        {% endif %}
+    </div>
+
+    {% endif %}
+</div>
+
+{% endblock %}

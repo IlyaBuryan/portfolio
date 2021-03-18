@@ -1,0 +1,44 @@
+{% extends 'extensions/layout.html' %}
+{% load static %}
+
+{% block title %}
+{{ title|capfirst }}
+{% endblock %}
+
+{% block header %}
+<div class="header header_allpages">
+    <div class="header_content container_width">
+        {% include 'extensions/header_menu.html' %}
+        <p class="headliner_allpages">Sample</p>
+        <p class="text_allpages">Calculate sample error</p>
+    </div>
+</div>
+{% endblock %}
+
+{% block maincontent %}
+
+<div class="main_sample container_width">
+    {% if form %}
+        <form method="post" class="main_sample_form">
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <div class="buttons">
+                <input type="submit" value="Calculate" class="btn btn-primary">
+                <a class="btn btn-warning" href="{% url 'calculators:sample' %}">
+                    Reset page
+                </a>
+            </div>
+        </form>
+
+        {% if answer %}
+            <p class="main_sample_answer">
+                &nbsp;{{ answer }}
+            </p>
+        {% endif %}
+    {% endif %}
+
+</div>
+
+{% endblock %}

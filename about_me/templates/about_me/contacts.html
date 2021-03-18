@@ -1,0 +1,69 @@
+{% extends 'extensions/layout.html' %}
+{% load static %}
+
+{% block title %}
+{{ title|capfirst }}
+{% endblock %}
+
+{% block header %}
+<div class="header header_allpages">
+    <div class="header_content container_width">
+        {% include 'extensions/header_menu.html' %}
+        <p class="headliner_allpages">Contacts</p>
+        <p class="text_allpages">The page describes possible ways to&nbsp;contact me.<br> Will be&nbsp;glad to&nbsp;hear
+            from you!</p>
+    </div>
+</div>
+{% endblock %}
+<div class="main_contacts">
+
+</div>
+
+{% block maincontent %}
+
+<div class="main_contacts container_width">
+    <div class="main_contacts_section">
+        <div class="main_contacts_section_text">
+            <img src="{% static 'img/contacts.jpg' %}" alt="contacts">
+            <p class="contact_headline">LOCATION</p>
+            <p class="contact_text">RU, 101000 - Moscow </p>
+            <p class="contact_headline">E-MAIL</p>
+            <p class="contact_text">Burian-iliyar@yandex.ru</p>
+            <p class="contact_headline">PHONE</p>
+            <p class="contact_text">+7 (909) 967 56 53</p>
+            <p class="contact_headline">ONLINE</p>
+            <ul class="contact_list">
+                <li>
+                    <a href="https://www.linkedin.com/in/ilya-buryan-13889b192/" target="_blank">
+                        <img class="footer_networks" src="{% static 'img/linkedin.svg' %}" alt="Linkedin">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/profile.php?id=100029358050577" target="_blank">
+                        <img class="footer_networks" src="{% static 'img/facebook.svg' %}" alt="Facebook">
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="main_contacts_section_form">
+            <form method="post">
+                {% csrf_token %}
+
+                {% if form %}
+                {{ form.as_p }}
+                {% endif %}
+
+                <input type="submit" value="Send" class="btn btn-primary">
+                <a class="btn btn-warning wid" href="{% url 'contacts' %}">Reset page</a>
+            </form>
+        </div>
+    </div>
+
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d53289.88443700247!2d37.595586242294395!3d55.7685022567757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sen!4v1614178626200!5m2!1sen!2sen"
+        width="100%" height="250" style="border:0; margin-bottom: 20px;" loading="lazy">
+    </iframe>
+</div>
+
+{% endblock %}

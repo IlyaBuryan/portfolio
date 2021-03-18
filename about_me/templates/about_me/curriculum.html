@@ -1,0 +1,63 @@
+{% extends 'extensions/layout.html' %}
+
+
+{% block title %}
+{{ title|capfirst }}
+{% endblock %}
+
+{% block header %}
+<div class="header header_allpages">
+    <div class="header_content container_width">
+        {% include 'extensions/header_menu.html' %}
+        <p class="headliner_allpages">My studies</p>
+        <p class="text_allpages">The page describes my studies in&nbsp;Geek Brains University,
+            at the faculty&nbsp;of Python development</p>
+    </div>
+</div>
+{% endblock %}
+
+{% block maincontent %}
+<br>
+<button type="button" class="btn btn-info hide-btn">Show / Hide description</button>
+<br>
+<div class="main_flex">
+    {% if object_list %}
+
+    {% for ex in object_list %}
+    <div class="main_done">
+
+        {% if ex.Completed == True %}
+        <div class="main_done_element">
+            <div class="main_done_sign">
+                <p>Completed</p>
+            </div>
+        </div>
+        {% else %}
+        <div class="main_done_not_element">
+            <div class="main_done_not_sign">
+                <p>Coming soon</p>
+            </div>
+        </div>
+        {% endif %}
+
+        <div class="main_section_study container_width">
+            <span class="main_section_study_headline">{{ ex.title }}</span>
+            <span class="main_section_study_text_list_item_i">{{ ex.result }}</span>
+            <hr class="main_section_study_hr">
+            <p class="main_section_study_text_list_item">Curriculum:</p>
+            <div class="main_section_study_text">
+                <ol class="main_section_study_text_list">
+                    {% for i in ex.classes_set.all %}
+                    <li class="main_section_study_text_list_item">{{ i.lessons }}</li>
+                    {% endfor %}
+                </ol>
+            </div>
+        </div>
+
+    </div>
+    {% endfor %}
+
+    {% endif %}
+</div>
+
+{% endblock %}

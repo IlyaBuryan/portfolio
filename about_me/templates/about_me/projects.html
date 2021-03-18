@@ -1,0 +1,170 @@
+{% extends 'extensions/layout.html' %}
+{% load static %}
+
+{% block title %}
+{{ title|capfirst }}
+{% endblock %}
+
+{% block header %}
+<div class="header header_allpages">
+    <div class="header_content container_width">
+        {% include 'extensions/header_menu.html' %}
+        <p class="headliner_allpages">My projects</p>
+        <p class="text_allpages">The page describes projects which i&nbsp;have made during studying and the
+            private time</p>
+    </div>
+</div>
+{% endblock %}
+
+{% block maincontent %}
+
+<div class="main_projects container_width">
+
+    <div class="main_project">
+        <div class="main_project_head">
+            <div class="main_project_head_line">
+                <p>Portfolio site</p>
+            </div>
+            <div class="main_project_head_link">
+                <p>link to &raquo;&raquo;</p>
+            </div>
+        </div>
+        <a href="https://github.com/IlyaBuryan/portfolio" target="_blank">...visit github</a>
+        <hr class="main_project_hr">
+        <div class="main_project_cont">
+            <div class="main_project_cont_descr">
+                <a href="https://github.com/IlyaBuryan/portfolio" target="_blank">
+                    <img src="{% static 'img/this.jpg' %}" alt="portfolio">
+                </a>
+                <p>
+                    This site is&nbsp;entirely developed in&nbsp;<strong>Django</strong> for introducing myself and
+                    demonstrating basic skills of&nbsp;working with Django, as it was my initial&nbsp;project. The site
+                    is&nbsp;fully adaptive for 3 types of&nbsp;devices: PC, tablet, mobile phone
+                    (including&nbsp; and was fully made by myself (frontend + backend) including
+                    burger&nbsp;menu.<br/><br/>
+
+                    The pages <u>&laquo;about me&raquo;</u> and <u>&laquo;projects&raquo;</u> give an&nbsp;idea about
+                    me,
+                    my&nbsp;motivation and projects, the experience that I&nbsp;have. Demonstrates the skills
+                    of&nbsp;working with static&nbsp;information and jumping through urls.<br/><br/>
+
+                    Pages <u>&laquo;curriculum&raquo;</u> and <u>&laquo;news&raquo;</u>. Demonstrates the ability
+                    to work with ORM: &nbsp;dynamically
+                    retrieve and put data into the database and to use it in the context. As&nbsp;well
+                    as&nbsp;the use of&nbsp;downloadable&nbsp;media&nbsp;files via admin panel. Also the ability to
+                    change the DOM
+                    model<br/><br/>
+
+                    The <u>&laquo;contacts&raquo;</u> and the <u>&laquo;calculators&raquo;</u> pages demonstrates the
+                    skills
+                    of&nbsp;working with forms, their interaction with the database and&nbsp;operation with the
+                    calculation algorithms on&nbsp;the&nbsp;server&nbsp;side. Also connection of the e-mail service.
+                </p>
+            </div>
+        </div>
+        <hr class="main_project_hr">
+        <div class="main_project_cont_tech">
+            <div class="main_project_head_line">
+                <p>Used stack of technologies:</p>
+            </div>
+            <ul class="main_section_text_list">
+                <li class="main_section_text_list_item">
+                    <strong>Django Framework v3.1.6</strong>
+                </li>
+                <li class="main_section_text_list_item">
+                    Pure <strong>Python</strong>
+                </li>
+                <li class="main_section_text_list_item"><strong>HTML5, CSS3</strong> (SCSS, media queries,
+                    Bootstrap)
+                </li>
+                <li class="main_section_text_list_item">
+                    <strong>JavaScript</strong>
+                </li>
+                <li class="main_section_text_list_item">
+                    <strong>Postgresql</strong> deploy
+                </li>
+                <li class="main_section_text_list_item">
+                    Support: Gimp, Figma, Validator, Typograf, Browsershots
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main_project">
+        <div class="main_project_head">
+            <div class="main_project_head_line">
+                <p>Online shop</p>
+            </div>
+            <div class="main_project_head_link">
+                <p>link to &raquo;&raquo;</p>
+            </div>
+        </div>
+        <a href="http://89.108.71.100:8001/" target="_blank">...visit site</a>
+        <a href="https://github.com/IlyaBuryan/onlineshop" target="_blank">...visit github</a>
+        <hr class="main_project_hr">
+        <div class="main_project_cont">
+            <div class="main_project_cont_descr">
+                <a href="https://github.com/IlyaBuryan/onlineshop" target="_blank">
+                    <img src="{% static 'img/onlineshop.jpg' %}" alt="portfolio">
+                </a>
+                <p>
+                    This site is&nbsp;made at&nbsp;an&nbsp;<strong>advanced level</strong> in&nbsp;the process
+                    of&nbsp;my&nbsp;learning
+                    the framework. It&nbsp;demonstrates ability to&nbsp;create a&nbsp;fully functional online store
+                    website.
+                    <br> <br>
+                    In&nbsp;addition to&nbsp;all the standard Django toolkit mastered via the first site: working with
+                    forms, templates, views, models, urls, statics and media files, this project had the following
+                    features:<br/>
+                <ul>
+                    <li>Complicated structure, consisting of&nbsp;<strong>4 applications</strong>: own admin panel, app
+                        for basket and
+                        users.
+                    </li>
+                    <li> Implemented <strong>complex queries</strong> to&nbsp;the database. Trained much in&nbsp;Shell.
+                    </li>
+                    <li><strong>Inheritance</strong> and <strong>redefinition</strong> of&nbsp;the class methods are
+                        applied when working
+                        with forms and
+                        models
+                    </li>
+                    <li>Adminapp is totally performed via <strong>CBV</strong></li>
+                    <li>Used both <strong>get and post</strong> data transfer to&nbsp;the controllers</li>
+                    <li><strong>Pagination</strong> is&nbsp;implemented on&nbsp;product pages</li>
+                    <li>Implemented user <strong>authentication and registration</strong> + page access
+                        <strong>decorators</strong></li>
+                    <li>Trained creating <strong>template filters</strong> and <strong>management scripts</strong></li>
+                </ul>
+                </p>
+            </div>
+        </div>
+        <hr class="main_project_hr">
+        <div class="main_project_cont_tech">
+            <div class="main_project_head_line">
+                <p>Used stack of technologies:</p>
+            </div>
+            <ul class="main_section_text_list">
+                <li class="main_section_text_list_item">
+                    <strong>Django Framework v3.1.6</strong>
+                </li>
+                <li class="main_section_text_list_item">
+                    Pure <strong>Python</strong>
+                </li>
+                <li class="main_section_text_list_item"><strong>HTML5, CSS3</strong> (SCSS, Bootstrap)
+                </li>
+                <li class="main_section_text_list_item">
+                    <strong>JavaScript</strong> (+JQuery, Ajax)
+                </li>
+                <li class="main_section_text_list_item">
+                    <strong>Postgresql</strong> deploy
+                </li>
+                <li class="main_section_text_list_item">
+                    Support: Gimp, Figma, Validator, Typograf, Browsershots
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

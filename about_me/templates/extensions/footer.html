@@ -1,0 +1,32 @@
+{% load static %}
+
+<div class="footer">
+    <div class="footer_container container_width">
+        <div class="footer_container_content">
+            <div class="footer_container_content_up">
+                <div class="footer_container_content_up_text">
+                    <p>I&rsquo;m available for job interview.<br />
+                        Let me&nbsp;know if&nbsp;you have any questions!</p>
+                </div>
+                <div class="footer_container_content_up_link">
+                    <a class="footer_link" href="{% url 'contacts' %}">To the <br> contacts page</a>
+                </div>
+            </div>
+            <hr class="footer_container_content_hr">
+            <div class="footer_container_content_down">
+                <ul class="footer_list">
+                    <li class="footer_list_item"> +7 (909) 967 56 53</li>
+                    <li class="footer_list_item"> Burian-iliyar@yandex.ru</li>
+                    <li class="footer_list_item"> &nbsp;
+                        <a href="https://www.linkedin.com/in/ilya-buryan-13889b192/" target="_blank">
+                            <img class="footer_networks" src="{% static 'img/linkedin.svg' %}" alt="Linkedin">
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=100029358050577" target="_blank">
+                            <img class="footer_networks" src="{% static 'img/facebook.svg' %}" alt="Facebook">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

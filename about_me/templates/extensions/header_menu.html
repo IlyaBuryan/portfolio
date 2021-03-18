@@ -1,0 +1,51 @@
+{% load static %}
+
+<div class="header_menu">
+    <div class="header_menu_icon">
+        <a class="header_menu_icon_text" href="{% url 'about' %}">B</a>
+    </div>
+
+    <div class="header_menu_burger">
+        <hr class="header_menu_burger_line">
+        <hr class="header_menu_burger_line">
+        <hr class="header_menu_burger_line">
+    </div>
+
+
+    <nav class="header_menu_navbar">
+        <ul class="header_menu_navbar_list">
+            <li class="header_menu_navbar_list_items">
+                <a href="{% url 'about' %}">About me</a>
+            </li>
+            <li class="header_menu_navbar_list_items">
+                <a href="{% url 'curriculum' %}">Curriculum</a>
+            </li>
+            <li class="header_menu_navbar_list_items">
+                <a href="{% url 'projects' %}">Projects</a>
+            </li>
+            <li class="header_menu_navbar_list_items">
+                <a href="{% url 'news' %}">News</a>
+            </li>
+            <li class="header_menu_navbar_list_items">
+                <a href="{% url 'contacts' %}">Contacts</a>
+            </li>
+            <li class="header_menu_navbar_list_items">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown header_menu_navbar_list_items">
+                        <span class="nav-link dropdown-toggle" id="navbarDarkDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Calculators
+                        </span>
+                        <ul class="dropdown-menu dropdown-menu-white" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li><a class="dropdown-item" href="{% url 'calculators:sample' %}">Sample</a></li>
+                            <li><a class="dropdown-item" href="{% url 'calculators:z_criteria' %}">Z-criteria</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{% url 'calculators:nps' %}">NPS diff.</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</div>
