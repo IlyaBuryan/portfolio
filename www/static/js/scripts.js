@@ -15,7 +15,6 @@ $('.hide-btn').on('click', function (event) {
     $('.main_section_study_hr').toggleClass('hidden');
     $('.main_flex').toggleClass('main_flex_activ');
     $('.main_done').toggleClass('main_done_activ');
-
 })
 
 
